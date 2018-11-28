@@ -45,6 +45,9 @@ from twisted.cred.portal import Portal
 from twisted.cred.checkers import FilePasswordDB
 from twisted.internet import reactor, ssl
 
+import sys
+sys.path.append("site_packages3")
+
 from base.applog import *
 from base.appconfig import Configuration
 from handler.manager import HandlerManager
