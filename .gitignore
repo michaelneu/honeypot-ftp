@@ -55,3 +55,5 @@ docs/_build/
 venv/
 config.xml
 honeypot_output.txt
+keys/*.key
+keys/*.csr
