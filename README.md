@@ -30,14 +30,9 @@ FAQ
 ===
 1) Generate SSL-Certificates
 
-CA:
-openssl genrsa -out ca.private.key 4096
-openssl req -new -x509 -days 4096 -key ca.private.key -out ca.public.key
-
-SRV:
-openssl genrsa -out smtp.private.key 4096
-openssl req -new -key smtp.private.key -out smtp.csr
-openssl x509 -req -days 1024 -in smtp.csr -CA ca.public.key -CAkey ca.private.key -set_serial 01 -out smtp.public.key
+```bash
+$ ./generate-keys.sh
+```
 
 SSL Check Connection
 openssl s_client -quiet -connect 127.0.0.1:990
