@@ -9,16 +9,24 @@ Features:
  * Catch malware files
  * distribute honeytoken files
 
-Dependencies:
- * Twisted
- * My site-packages(3) --> common-modules
-
 Usage:
 ```bash
-# Generate Config
-python ftp.py -d config.xml
-# Run
-python ftp.py
+# clone repository
+$ git clone --recursive <url>
+$ cd honeypot-ftp/
+
+# setup a virtual environment
+$ python3 -m venv venv
+$ source venv/bin/activate
+
+# install dependencies
+$ pip3 install -r requirements.txt
+
+# generate config
+$ python3 ftp.py -d config.xml
+
+# run the server
+$ python3 ftp.py
 ```
 
 TODO: 
